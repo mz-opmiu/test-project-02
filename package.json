@@ -9,8 +9,10 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "lodash": "^4.17.14",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
+    "vue-meta": "^2.0.4",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
@@ -19,8 +21,11 @@
     "@vue/cli-service": "^3.9.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
+    "prerender-spa-plugin": "^3.4.0",
     "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.10",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.1.0"
   },
   "eslintConfig": {
     "root": true,

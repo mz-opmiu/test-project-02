@@ -1,25 +1,36 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
+import VueMeta from 'vue-meta'
+import isMobile from '@/js/utils/checkUserAgent.js'
 
 Vue.use(Router)
+
+Vue.use(VueMeta, {
+  keyName: 'metaInfo',
+  attribute: 'data-vue-meta',
+  ssrAttribute: 'data-vue-meta-server-rendered',
+  tagIDKeyName: 'vmid'
+})
 
 export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
-      name: 'home',
-      component: Home
+      path: '/event01',
+      name: 'event01',
+      component: () =>
+        isMobile()
+          ? import('./event01/mobile/App.vue')
+          : import('./event01/pc/App.vue')
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      path: '/event02',
+      name: 'event02',
+      component: () =>
+        isMobile()
+          ? import('./event02/mobile/App.vue')
+          : import('./event02/pc/App.vue')
     }
   ]
 })
