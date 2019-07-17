@@ -13,6 +13,15 @@ const productionPlugins = [
 
 module.exports = {
   lintOnSave: false,
+  css: {
+    loaderOptions: {
+      sass: {
+        data: `
+                @import '@/scss/_global.scss';
+              `
+      }
+    }
+  },
   configureWebpack: config => {
     if (process.env.NODE_ENV === 'production') {
       config.plugins.push(...productionPlugins)

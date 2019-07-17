@@ -3,6 +3,7 @@
     <!-- <img :src="createImg()" alt="" /> -->
   </div>
 </template>
+
 <script>
 import { getViewport } from '@/js/utils/getViewport.js'
 import meta from '@/event01/js/metaInfo.json'
@@ -16,7 +17,11 @@ export default {
   }
 }
 </script>
+
 <style lang="scss" scoped>
+// $device: 'mobile';
+// $image-url: '@/assets/event01/images/m';
+
 .wrap {
   width: 720px;
   margin: 0 auto;

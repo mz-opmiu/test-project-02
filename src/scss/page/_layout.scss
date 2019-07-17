@@ -1,0 +1,19 @@
+// @if ($device == 'm') {
+// .wrap {
+//   position: relative;
+//   width: $width;
+//   margin: 0 auto;
+// }
+// } @else {
+.wrap {
+  position: relative;
+  min-width: $min-width;
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+.inner-con {
+  width: $min-width;
+  margin: 0 auto;
+}
+// }
