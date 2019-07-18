@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 const PrerenderSpaPlugin = require('prerender-spa-plugin')
 
 const productionPlugins = [
@@ -23,8 +24,23 @@ module.exports = {
     }
   },
   configureWebpack: config => {
+    // 공통환경
+    config.resolve.extensions['.js']
+    config.resolve.alias[{ jquery: 'jquery/dist/jquery.js' }]
+    config.plugins = [
+      ...config.plugins,
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jquery: 'jquery',
+        'window.jQuery': 'jquery',
+        jQuery: 'jquery'
+      })
+    ]
     if (process.env.NODE_ENV === 'production') {
+      // 운영환경일때
       config.plugins.push(...productionPlugins)
+    } else {
+      // 기타환경 (ex: 개발,테스트..)
     }
   }
 }

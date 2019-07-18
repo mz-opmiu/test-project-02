@@ -292,26 +292,29 @@ export default {
     PopComplete
   },
   created() {
-    const testArr = [1, 2, 3, 4, 5]
-
-    console.log(['testarr', ...testArr])
-    const promise1 = new Promise(resolve => {
-      setTimeout(() => {
-        resolve('sojung test ing!!!!!')
-      }, 300)
-    })
-
-    promise1.then(value => {
-      console.log(value)
-      // expected output: "foo"
-    })
-
-    console.log(promise1)
-
-    let sf = Symbol.for('test')
-    console.log(sf === Symbol.for('test')) // true
+    // this.es6Test()
   },
   methods: {
+    es6Test() {
+      const testArr = [1, 2, 3, 4, 5]
+
+      console.log(['testarr', ...testArr])
+      const promise1 = new Promise(resolve => {
+        setTimeout(() => {
+          resolve('sojung test ing!!!!!')
+        }, 300)
+      })
+
+      promise1.then(value => {
+        console.log(value)
+        // expected output: "foo"
+      })
+
+      console.log(promise1)
+
+      let sf = Symbol.for('test')
+      console.log(sf === Symbol.for('test')) // true
+    },
     openPop(popName) {
       this.currentPop = popName
       let scrollTop = $(window).scrollTop()
@@ -331,9 +334,6 @@ export default {
         ...userModel,
         ...value
       }
-
-      // console.log(eventType)
-      // console.log(value)
     }
   }
 }
@@ -344,6 +344,7 @@ $device-kind: 'pc';
 $image-url: '../../assets/event01/images/' + $device-kind;
 
 .main {
+  position: relative;
   .btn__event {
     position: absolute;
     left: 50%;

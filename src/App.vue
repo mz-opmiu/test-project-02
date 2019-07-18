@@ -8,9 +8,9 @@
           /></a>
         </h1>
         <nav>
-          <router-link to="/2019wish">Main</router-link>
-          <router-link to="/2019wish/gallery">Wish Ranking</router-link>
-          <router-link to="/2019wish/storelist">Store List</router-link>
+          <router-link to="/event01">Main</router-link>
+          <router-link to="/event01/gallery">Wish Ranking</router-link>
+          <router-link to="/event01/storelist">Store List</router-link>
         </nav>
       </div>
     </header>
@@ -25,12 +25,17 @@ export default {
 </script>
 
 <style lang="scss">
+// 전 components에 적용되어야 할 scss
 @import '@/scss/base/_reset-eric.scss';
 @import '@/scss/page/_layout.scss';
 </style>
 
 <style lang="scss" scoped>
 $image-url: './assets/';
+
+#app {
+  position: relative;
+}
 
 header {
   width: 100%;

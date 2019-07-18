@@ -6,7 +6,10 @@
   >
     <div class="popup__cover">
       <div class="popup__header">
-        <img src="@/assets/event01/images/pop/tl-pop-event1.jpg" alt="킨더야 소원을 들어줘" />
+        <img
+          src="@/assets/event01/images/pop/tl-pop-event1.jpg"
+          alt="킨더야 소원을 들어줘"
+        />
       </div>
       <div class="popup__content popup__inner-con">
         <p>
