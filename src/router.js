@@ -23,14 +23,6 @@ export default new Router({
         isMobile()
           ? import('./event01/mobile/App.vue')
           : import('./event01/pc/App.vue')
-    },
-    {
-      path: '/event02',
-      name: 'event02',
-      component: () =>
-        isMobile()
-          ? import('./event02/mobile/App.vue')
-          : import('./event02/pc/App.vue')
     }
   ]
 })

@@ -340,11 +340,13 @@ export default {
 </script>
 
 <style lang="scss">
-$device-kind: 'pc';
-$image-url: '../../assets/event01/images/' + $device-kind;
+@import '@/scss/vars/_variables.scss';
+@import '@/scss/page/_layout.scss';
+
+$event-name: 'event01';
+$image-url: '../../assets/' + $event-name + '/images/' + $device-kind;
 
 .main {
-  position: relative;
   .btn__event {
     position: absolute;
     left: 50%;

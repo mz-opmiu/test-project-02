@@ -18,18 +18,10 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-// $device: 'mobile';
-// $image-url: '@/assets/event01/images/m';
+<style lang="scss">
+@import '@/scss/vars/_variables-m.scss';
+@import '@/scss/page/_layout.scss';
 
-.wrap {
-  width: 720px;
-  margin: 0 auto;
-  background-color: red;
-  font-size: 16px;
-}
-
-img {
-  width: 100%;
-}
+$event-name: 'event01';
+$image-url: '../../assets/' + $event-name + '/images/' + $device-kind;
 </style>

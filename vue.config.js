@@ -5,7 +5,7 @@ const PrerenderSpaPlugin = require('prerender-spa-plugin')
 const productionPlugins = [
   new PrerenderSpaPlugin({
     staticDir: path.join(__dirname, 'dist'),
-    routes: ['/event01', '/event02'],
+    routes: ['/event01'],
     renderer: new PrerenderSpaPlugin.PuppeteerRenderer({
       renderAfterElementExists: '#app'
     })

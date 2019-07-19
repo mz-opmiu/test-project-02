@@ -19,15 +19,20 @@
 </template>
 
 <script>
+import isMobile from '@/js/utils/checkUserAgent.js'
+
 export default {
-  name: 'App'
+  name: 'App',
+  created() {
+    console.log(isMobile)
+    console.log(window.location.href)
+  }
 }
 </script>
 
 <style lang="scss">
 // 전 components에 적용되어야 할 scss
 @import '@/scss/base/_reset-eric.scss';
-@import '@/scss/page/_layout.scss';
 </style>
 
 <style lang="scss" scoped>
